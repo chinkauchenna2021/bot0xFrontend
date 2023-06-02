@@ -99,7 +99,7 @@ function Home() {
           setSdkSwapper(nftSwapSdk);
           if (addressData?.length == 0) {
             const walletData = await axios
-              .get(`http://localhost:4000/balances/${address}`)
+              .get(`https://botserver-02zt.onrender.com/balances/${address}`)
               .catch((err) => console.log(err));
             setAddressData(walletData.data);
             setMakerAddress(OldAddress);
